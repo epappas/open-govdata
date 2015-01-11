@@ -32,6 +32,7 @@ include_recipe 'git'                if node['generic_nodejs']['config']['install
 include_recipe 'nodejs'             if node['generic_nodejs']['config']['install_ndoejs']
 include_recipe 'couchdb'            if node['generic_nodejs']['config']['install_couchdb']
 include_recipe 'redisio'            if node['generic_nodejs']['config']['install_redisio']
+include_recipe 'redisio::enable'    if node['generic_nodejs']['config']['install_redisio']
 # include_recipe 'iptables'           if node['generic_nodejs']['config']['install_iptables']
 
 # Set ENV
