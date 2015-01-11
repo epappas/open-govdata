@@ -7,9 +7,13 @@
   "json_class": "Chef::Environment",
   "chef_type": "environment",
   "default_attributes": {
-
+    "generic_nodejs": {
+      "NODE_ENV": "development"
+    }
   },
   "override_attributes": {
-
+    "generic_nodejs": {
+      "NODE_ENV": "development"
+    }
   }
 }

@@ -30,6 +30,10 @@ default['generic_nodejs']['version']       = '0.0.1-alpha'
 default['generic_nodejs']['src_archive']   = "https://github.com/epappas/open-govdata/archive/#{node['generic_nodejs']['version']}.tar.gz"
 default['generic_nodejs']['checksum']      = ""
 
+# NODE_ENV
+# ==========================================
+default['generic_nodejs']['NODE_ENV'] = "development"
+
 # Config
 # ==========================================
 default['generic_nodejs']['config']['install_git']      = true

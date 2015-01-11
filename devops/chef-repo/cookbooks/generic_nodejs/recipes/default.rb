@@ -24,6 +24,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# System's dependencies
+# ==========================================
 include_recipe 'build-essential'
 include_recipe 'openssl'            if node['generic_nodejs']['config']['install_openssl']
 include_recipe 'git'                if node['generic_nodejs']['config']['install_git']
@@ -32,6 +34,18 @@ include_recipe 'couchdb'            if node['generic_nodejs']['config']['install
 include_recipe 'redisio'            if node['generic_nodejs']['config']['install_redisio']
 # include_recipe 'iptables'           if node['generic_nodejs']['config']['install_iptables']
 
+# Set ENV
+# ==========================================
+ENV['NODE_ENV'] = node['generic_nodejs']['NODE_ENV']
+
+bash "NODE_ENV" do
+  code <<-EOF
+  echo "NODE_ENV=${NODE_ENV}\nexport NODE_ENV" >> /etc/profile.d/node_env.sh
+EOF
+end
+
+# Default user
+# ==========================================
 user 'generic_nodejs' do
   home '/usr/local/var/lib/generic_nodejs'
   comment 'generic_nodejs user'
