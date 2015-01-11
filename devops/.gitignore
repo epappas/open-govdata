@@ -1,0 +1,18 @@
+=======
+.vagrant
+/cookbooks
+
+# Bundler
+bin/*
+.bundle/*
+
+.kitchen/
+.kitchen.local.yml
+chef-solo/
+
+.ssh
+.pem
+.pub
+knife.rb
+*.deb
+.chef
