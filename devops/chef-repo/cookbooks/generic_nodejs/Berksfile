@@ -1,0 +1,13 @@
+source "https://supermarket.chef.io"
+
+metadata
+
+cookbook 'apt'
+cookbook 'build-essential'
+cookbook 'openssl'
+cookbook 'couchdb'
+cookbook 'nodejs'
+cookbook 'redisio'
+cookbook 'chef-client'
+cookbook 'git'
+cookbook 'iptables'

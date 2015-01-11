@@ -1,0 +1,21 @@
+{
+    "name": "generic_nodejs",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "description": "generic_nodejs base server",
+    "override_attributes": {},
+    "default_attributes": {
+        "couch_db": {
+            "config": {
+                "httpd": {
+                    "port": 5889
+                }
+            }
+        }
+    },
+    "env_run_lists": {
+    },
+    "run_list": [
+        "recipe[generic_nodejs]"
+    ]
+}
