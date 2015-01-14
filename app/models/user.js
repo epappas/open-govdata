@@ -28,12 +28,12 @@ var request = require('request');
 
 /**
  * Basic User info
- * @param redis
+ * @param dbTrait
  * @param conf
  * @returns {{}}
  * @constructor
  */
-module.exports = function User(redis, conf) {
+module.exports = function User(dbTrait, conf) {
 
     return {};
 };
